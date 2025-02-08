@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/navbar.css';
+import faviconImage from '../assets/favicon-512x512.png';
 
 const Navbar = () => {
     const handleScroll = (e, targetId) => {
@@ -19,7 +20,14 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <h1>Coffee and Java enjoyer and simply a good person...</h1>
+            <div className="navbar-title">
+                <img 
+                    src={faviconImage} 
+                    alt="coffee icon" 
+                    className="navbar-favicon"
+                />
+                <h1>Coffee and Java enjoyer and simply a good person...</h1>
+            </div>
             <ul>
                 <li><a href="#home" onClick={scrollToTop}>Home</a></li>
                 <li><a href="#about" onClick={(e) => handleScroll(e, '#about')}>About</a></li>
