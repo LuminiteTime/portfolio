@@ -11,7 +11,7 @@ const HeroSection = () => (
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
-                Hi, I'm <span className="highlight">Mikhail Trifonov</span>
+                Hi, I&apos;m <span className="highlight">Mikhail Trifonov</span>
             </motion.h1>
             <motion.p
                 initial={{ opacity: 0, y: 50 }}
