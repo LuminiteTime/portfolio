@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../styles/hero.css';
-import myPhoto from '../assets/my-photo.jpg';
+import myPhoto from '../assets/avatar.png';
 
 const HeroSection = () => (
     <section className="hero">
