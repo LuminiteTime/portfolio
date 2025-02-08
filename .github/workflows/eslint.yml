@@ -1,4 +1,4 @@
-name: ESLint Check
+name: Node CI environment
 
 on:
   push:
@@ -6,9 +6,35 @@ on:
 
 jobs:
   lint:
-    name: Run ESLint
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [20]
+
     steps:
-      - name: ESLint checker
-        uses: ninosaurus/eslint-check@v5.3.1
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: npm login
+        run:
+          npm config set //registry.npmjs.org/:_authToken=$NPM_READONLY_AUTH_TOKEN
+        env:
+          NPM_READONLY_AUTH_TOKEN: ${{ secrets.NPM_READONLY_AUTH_TOKEN }}
+
+      - name: npm install
+        working-directory: ./application
+        run: npm i --ignore-scripts
+
+      - name: Run ESLint
+        uses: ninosaurus/eslint-check@v5
+        with:
+          eslint-config-path: "./application/assets/js/.eslintrc.json"
+          custom-directory: "./application"
+          repo-token: ${{secrets.GITHUB_TOKEN}}
