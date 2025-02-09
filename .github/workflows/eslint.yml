@@ -1,7 +1,6 @@
 name: Node CI environment
 
 on:
-  push:
   pull_request:
 
 jobs:
