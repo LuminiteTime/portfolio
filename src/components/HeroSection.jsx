@@ -18,7 +18,7 @@ const HeroSection = () => (
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5 }}
             >
-                Enthusiastic Java Backend Developer
+                Enthusiastic Java{'/'}Scala Backend Developer
             </motion.p>
         </div>
         <div className="hero-photo-container">

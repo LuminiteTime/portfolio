@@ -1,0 +1,41 @@
+:root {
+    --section-padding: 6rem 2rem;
+    --container-width: 1200px;
+    --content-width: 90%;
+    --section-gap: 4rem;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+section {
+    padding: var(--section-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-container {
+    width: var(--content-width);
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 4rem 1.5rem;
+        --content-width: 95%;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}

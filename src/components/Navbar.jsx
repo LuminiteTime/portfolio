@@ -26,7 +26,7 @@ const Navbar = () => {
                     alt="coffee icon" 
                     className="navbar-favicon"
                 />
-                <h1>Coffee and Java enjoyer and simply a good person...</h1>
+                <h1>Coffee and Java{'/'}Scala enjoyer and simply a good person...</h1>
             </div>
             <ul>
                 <li><a href="#home" onClick={scrollToTop}>Home</a></li>
