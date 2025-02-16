@@ -48,8 +48,8 @@
 }
 
 html {
-    font-size: var(--base-font-size);
-    -webkit-text-size-adjust: 100%;
+    /* font-size: var(--base-font-size); */
+    /* -webkit-text-size-adjust: 100%; */
 }
 
 body {
@@ -57,10 +57,10 @@ body {
     color: var(--text-primary);
     line-height: var(--base-line-height);
     font-size: 1rem;
-    text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
-    -ms-text-size-adjust: none;
+    /* text-size-adjust: none; */
+    /* -webkit-text-size-adjust: none; */
+    /* -moz-text-size-adjust: none; */
+    /* -ms-text-size-adjust: none; */
 }
 
 section {
