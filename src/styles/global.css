@@ -40,6 +40,8 @@
 }
 
 html {
+    scroll-padding-top: 100px; /* Adds padding for all scroll-to-anchor navigation */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -51,6 +53,7 @@ body {
 
 section {
     padding: var(--section-padding);
+    position: relative;
 }
 
 .container {
@@ -103,4 +106,56 @@ section {
 
 h2 {
     margin-bottom: 1rem;
+}
+
+section h2 {
+    position: relative;
+    padding-top: 2rem;
+    margin-top: -2rem;
+}
+
+/* Add a decorative line that appears when scrolled to */
+section:target::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 80px; /* Adjust based on navbar height */
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--accent-color),
+        transparent
+    );
+    animation: slideFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+/* Add a subtle highlight effect for the current section */
+section:target {
+    animation: highlight 1s ease-out;
+}
+
+@keyframes highlight {
+    0% {
+        background-color: transparent;
+    }
+    30% {
+        background-color: rgba(var(--accent-color-rgb), 0.05);
+    }
+    100% {
+        background-color: transparent;
+    }
 }

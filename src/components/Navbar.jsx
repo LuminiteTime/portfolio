@@ -5,7 +5,13 @@ import faviconImage from '../assets/favicon-512x512.png';
 const Navbar = () => {
     const handleScroll = (e, targetId) => {
         e.preventDefault();
-        document.querySelector(targetId).scrollIntoView({
+        const element = document.querySelector(targetId);
+        const navHeight = document.querySelector('.navbar').offsetHeight;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
+        window.scrollTo({
+            top: offsetPosition,
             behavior: 'smooth'
         });
     };
