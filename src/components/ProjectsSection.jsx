@@ -21,13 +21,6 @@ const projects = [
         imageUrl: ragnarProjectImage,
         repoUrl: 'https://gitlab.pg.innopolis.university/m.trifonov/ragnar',
         skills: ['Python', 'Svelte', 'ML']
-    },
-    {
-        id: 3,
-        title: 'Project Three',
-        description: 'A brief description of Project Three. It implements advanced algorithms and data structures.',
-        imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URL
-        repoUrl: '#',
     }
 ];
 
