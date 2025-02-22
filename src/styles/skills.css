@@ -1,7 +1,7 @@
 .skills {
-    padding: var(--section-padding);
+    padding: 4rem 2rem;
     background: var(--bg-secondary);
-    min-height: 100vh;
+    min-height: 90vh;
     position: relative;
     overflow: hidden;
     background-image: 
@@ -14,10 +14,10 @@
 }
 
 .skills h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--text-primary);
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     position: relative;
 }
 
@@ -38,7 +38,7 @@
     max-width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 2rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -53,13 +53,13 @@
 }
 
 .skill-category {
-    min-width: 350px;
-    max-width: 400px; /* Добавляем максимальную ширину */
+    min-width: 250px;
+    max-width: 300px;
     flex: 1; /* Позволяем карточкам равномерно распределять пространство */
     scroll-snap-align: start;
     background: var(--bg-primary);
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 1.5rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: none; /* Удаляем размытие */
@@ -115,13 +115,13 @@
 }
 
 .category-title {
-    min-height: 4rem; /* Увеличиваем минимальную высоту */
+    min-height: 2.5rem;
     display: flex;
     align-items: flex-start; /* Меняем с center на flex-start */
     gap: 1rem;
-    font-size: 1.75rem;
+    font-size: 1.3rem;
     color: var(--text-primary);
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     position: relative;
@@ -144,7 +144,7 @@
 
 .category-icon {
     color: var(--accent-color);
-    font-size: 2rem;
+    font-size: 1.75rem;  /* Reduced from 2rem */
     flex-shrink: 0; /* Предотвращаем сжатие иконки */
     margin-top: 0.25rem; /* Небольшой отступ сверху для выравнивания с текстом */
 }
@@ -167,13 +167,13 @@
 
 .skills-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
 }
 
 .skill-item {
     background: rgba(255, 255, 255, 0.03);
-    padding: 1.25rem;
+    padding: 0.8rem;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -223,7 +223,7 @@
 }
 
 .skill-icon-wrapper {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--accent-color);
     transition: transform 0.3s ease;
 }
@@ -233,7 +233,7 @@
 }
 
 .skill-name {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--text-secondary);
 }
 
