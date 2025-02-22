@@ -12,7 +12,6 @@
     overflow: hidden;
 }
 
-/* Добавляем декоративные элементы */
 .about::before {
     content: '';
     position: absolute;

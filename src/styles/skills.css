@@ -42,29 +42,29 @@
     padding: 2rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-    justify-content: center; /* Центрируем контейнер */
-    margin: 0 auto; /* Автоматические отступы по бокам */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .skills-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
 }
 
 .skill-category {
     min-width: 250px;
     max-width: 300px;
-    flex: 1; /* Позволяем карточкам равномерно распределять пространство */
+    flex: 1;
     scroll-snap-align: start;
     background: var(--bg-primary);
     border-radius: 20px;
     padding: 1.5rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: none; /* Удаляем размытие */
-    transform-style: flat; /* Меняем на flat */
-    isolation: isolate; /* Добавляем изоляцию для корректной работы z-index */
+    backdrop-filter: none;
+    transform-style: flat;
+    isolation: isolate;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -81,7 +81,7 @@
 
 .skill-category > * {
     position: relative;
-    z-index: 1; /* Поднимаем контент над эффектами */
+    z-index: 1;
 }
 
 .skill-category:hover {
@@ -89,7 +89,6 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Заменяем старые эффекты свечения на более мягкие */
 .skill-category::after {
     content: '';
     position: absolute;
@@ -109,7 +108,6 @@
     opacity: 1;
 }
 
-/* Убираем старый after эффект */
 .skill-category::after {
     display: none;
 }
@@ -117,7 +115,7 @@
 .category-title {
     min-height: 2.5rem;
     display: flex;
-    align-items: flex-start; /* Меняем с center на flex-start */
+    align-items: flex-start;
     gap: 1rem;
     font-size: 1.3rem;
     color: var(--text-primary);
@@ -144,9 +142,9 @@
 
 .category-icon {
     color: var(--accent-color);
-    font-size: 1.75rem;  /* Reduced from 2rem */
-    flex-shrink: 0; /* Предотвращаем сжатие иконки */
-    margin-top: 0.25rem; /* Небольшой отступ сверху для выравнивания с текстом */
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
 }
 
 .subcategories-grid {
@@ -188,7 +186,7 @@
         rgba(255, 255, 255, 0.05) 0%,
         rgba(255, 255, 255, 0.03) 100%
     );
-    backdrop-filter: none; /* Удаляем размытие */
+    backdrop-filter: none;
     transform-style: flat;
     isolation: isolate;
     perspective: 1000px;
@@ -204,7 +202,6 @@
         0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
-/* Заменяем резкое свечение на мягкий градиент */
 .skill-item::before {
     content: '';
     position: absolute;
@@ -261,7 +258,7 @@
     .skills-container {
         padding: 1rem;
         gap: 1.5rem;
-        justify-content: flex-start; /* На мобильных выравниваем по левому краю */
+        justify-content: flex-start;
     }
 
     .skill-category, 
@@ -309,7 +306,6 @@
     }
 }
 
-/* Добавляем градиентный фон */
 .skills::before {
     content: '';
     position: absolute;
@@ -332,7 +328,6 @@
     pointer-events: none;
 }
 
-/* Добавляем плавающие частицы */
 @keyframes floatParticle {
     0%, 100% { transform: translate(0, 0) rotate(0deg); }
     25% { transform: translate(10px, -10px) rotate(90deg); }
@@ -366,14 +361,8 @@
 .particle:nth-child(2) { top: 60%; left: 80%; animation-delay: -5s; }
 .particle:nth-child(3) { top: 80%; left: 30%; animation-delay: -10s; }
 
-/* Добавляем отслеживание позиции мыши для эффекта свечения */
 @media (hover: hover) {
-    .skills-container {
-        /* Удаляем cursor: none */
-    }
-
     .skill-category {
-        /* Удаляем cursor: none */
         cursor: pointer;
     }
 

@@ -10,8 +10,7 @@ const ContactSection = () => (
                 <FaEnvelope className="icon"/>
                 <span>Email</span>
             </a>
-            <a href="https://github.com/LuminiteTime" className="contact-item" target="_blank"
-               rel="noopener noreferrer">
+            <a href="https://github.com/LuminiteTime" className="contact-item" target="_blank" rel="noopener noreferrer">
                 <FaGithub className="icon"/>
                 <span>GitHub</span>
             </a>

@@ -130,7 +130,6 @@ const SkillsSection = () => {
 
     return (
         <section id="skills" className="skills">
-            {/* Добавляем декоративные частицы */}
             <div className="particle"></div>
             <div className="particle"></div>
             <div className="particle"></div>

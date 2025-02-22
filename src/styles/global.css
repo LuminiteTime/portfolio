@@ -1,24 +1,19 @@
 :root {
-    /* Colors */
     --bg-primary: #1a1a1a;
     --bg-darker: #171717;
     --bg-secondary: #242424;
     --accent-color: #ff6b6b;
     
-    /* Text Colors */
     --text-primary: #f0f0f0;
     --text-secondary: #d1d1d1;
     --text-muted: #a0a0a0;
     
-    /* Glass Effects */
     --glass-bg: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.05);
     
-    /* Gradients */
     --gradient-primary: linear-gradient(45deg, var(--accent-color), #ff8e8e);
     --gradient-subtle: linear-gradient(180deg, var(--bg-darker), var(--bg-primary));
     
-    /* Spacing */
     --section-padding: 6rem 2rem;
     --container-width: 1400px;
     --gap-xs: 0.5rem;
@@ -26,16 +21,13 @@
     --gap-md: 1.5rem;
     --gap-lg: 2rem;
     
-    /* Borders */
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 20px;
     
-    /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
 
-    /* Base Sizes */
     --base-font-size: 16px;
     --base-line-height: 1.6;
 }
@@ -48,8 +40,6 @@
 }
 
 html {
-    /* font-size: var(--base-font-size); */
-    /* -webkit-text-size-adjust: 100%; */
 }
 
 body {
@@ -57,10 +47,6 @@ body {
     color: var(--text-primary);
     line-height: var(--base-line-height);
     font-size: 1rem;
-    /* text-size-adjust: none; */
-    /* -webkit-text-size-adjust: none; */
-    /* -moz-text-size-adjust: none; */
-    /* -ms-text-size-adjust: none; */
 }
 
 section {
@@ -73,7 +59,6 @@ section {
     padding: 0 var(--gap-md);
 }
 
-/* Common section title styles */
 .section-title {
     font-size: 2.5rem;
     color: var(--text-primary);
@@ -94,7 +79,6 @@ section {
     border-radius: 2px;
 }
 
-/* Glass card common styles */
 .glass-card {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
