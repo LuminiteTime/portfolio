@@ -6,10 +6,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: rgba(20, 20, 20, 0.85); 
+    background-color: rgba(40, 36, 42, 0.2); 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px); 
-    color: #ff6b6b; 
+    color: (--accent-color); 
     transition: background-color 0.3s ease;
 }
 
@@ -57,7 +57,7 @@
 
 .navbar a:hover {
     color: #1e1e1e; 
-    background-color: #ff6b6b; 
+    background-color: var(--accent-color); 
 }
 
 .navbar a:active {

@@ -78,7 +78,7 @@
 }
 
 .contact-item:hover {
-    color: #ff6b6b; 
+    color: var(--accent-color); 
     transform: scale(1.1); 
 }
 
@@ -89,7 +89,7 @@
 }
 
 .contact-item:hover .icon {
-    color: #ff6b6b; 
+    color: var(--accent-color); 
 }
 
 .contact-icon {
