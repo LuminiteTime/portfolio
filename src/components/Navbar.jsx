@@ -17,7 +17,6 @@ const Navbar = () => {
             behavior: 'smooth'
         });
         
-        // Close menu after clicking a link on mobile
         setIsMenuOpen(false);
     };
 
