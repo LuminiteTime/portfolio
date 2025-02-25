@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/navbar.css';
 import faviconImage from '../assets/favicon-512x512.png';
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     const handleScroll = (e, targetId) => {
         e.preventDefault();
         const element = document.querySelector(targetId);
@@ -14,6 +16,8 @@ const Navbar = () => {
             top: offsetPosition,
             behavior: 'smooth'
         });
+        
+        setIsMenuOpen(false);
     };
 
     const scrollToTop = (e) => {
@@ -22,6 +26,7 @@ const Navbar = () => {
             top: 0,
             behavior: 'smooth'
         });
+        setIsMenuOpen(false);
     };
 
     return (
@@ -34,7 +39,18 @@ const Navbar = () => {
                 />
                 <h1>Coffee and Java{'/'}Scala enjoyer</h1>
             </div>
-            <ul>
+            
+            <button 
+                className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Toggle menu"
+            >
+                <span className="hamburger-line"></span>
+                <span className="hamburger-line"></span>
+                <span className="hamburger-line"></span>
+            </button>
+
+            <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
                 <li><a href="#home" onClick={scrollToTop}>Home</a></li>
                 <li><a href="#about" onClick={(e) => handleScroll(e, '#about')}>About</a></li>
                 <li><a href="#projects" onClick={(e) => handleScroll(e, '#projects')}>Projects</a></li>
